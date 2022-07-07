@@ -1,8 +1,8 @@
-"""mafiaBot Help Command"""
+"""InvisibleBot Help Command"""
 
 from . import *
 from userbot import CMD_HELP
-from mafiabot.utils import *
+from invisiblebot.utils import *
 
 
 @bot.on(admin_cmd(pattern="plinfo(?: |$)(.*)", outgoing=True))
