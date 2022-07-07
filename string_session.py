@@ -2,7 +2,7 @@ from telethon.sessions import StringSession
 from telethon.sync import TelegramClient
 mafia = input("✵ Enter y/yes to continue: ")
 if mafia == 'y' or 'yes':
- print("\nPlease go to my.telegram.org and get your API Id and API Hash to proceed\n\n 𒊹︎︎︎ɢɪᴛʜᴜʙ ʀᴇᴘᴏ ɪs ➪➪ https://github.com/nameg1708/Plugins")
+ print("\nPlease go to my.telegram.org and get your API Id and API Hash to proceed\n\n 𒊹︎︎︎ɢɪᴛʜᴜʙ ʀᴇᴘᴏ ɪs ➪➪ https://github.com/nameg1708/userbot")
 print("""\n\nWelcome To monilBot String Session\nGenerator By @Violence_Dont\n\n""")
 print("""Enter Your Valid Details To Continue!\n\n """)
 
