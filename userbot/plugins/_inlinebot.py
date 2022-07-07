@@ -15,7 +15,7 @@
 #    This Inline Helper Code is solely owned by @SupRemE_AnanD
 #    You Should Not Copy This Code Without Proper Permission.
 
-# Help Pic feature added by @H1M4N5HU0P
+# Help Pic feature added by @Violence_Dont
 
 from math import ceil
 from re import compile
@@ -27,12 +27,12 @@ from telethon.tl.functions.channels import JoinChannelRequest
 
 from userbot import *
 from userbot.cmdhelp import *
-from mafiabot.utils import *
+from invisiblebot.utils import *
 from userbot.Config import Config
 
-mafia_help_pic = Config.HELP_PIC or "https://telegra.ph/file/f6a46c6251bb8a5bea300.mp4"
-mafia_row = Config.BUTTONS_IN_HELP
-mafia_emoji = Config.EMOJI_IN_HELP
+invisible_help_pic = Config.HELP_PIC or "https://te.legra.ph/file/f8140f4312c7bafd1bf9c.jpg"
+invisible_row = Config.BUTTONS_IN_HELP
+invisible_emoji = Config.EMOJI_IN_HELP
 # thats how a lazy guy imports
 # MafiaBot
 
@@ -58,13 +58,13 @@ def button(page, modules):
     buttons.append(
         [
             custom.Button.inline(
-               f"◀️ ᏰᎯᏣᏦ {mafia_emoji}", data=f"page({(max_pages - 1) if page == 0 else (page - 1)})"
+               f"◀️ ᏰᎯᏣᏦ {invisible_emoji}", data=f"page({(max_pages - 1) if page == 0 else (page - 1)})"
             ),
             custom.Button.inline(
-               f"•{mafia_emoji} ❌ {mafia_emoji}•", data="close"
+               f"•{invisible_emoji} ❌ {invisible_emoji}•", data="close"
             ),
             custom.Button.inline(
-               f"{mafia_emoji} ᏁᏋﾒᎿ ▶️", data=f"page({0 if page == (max_pages - 1) else page + 1})"
+               f"{invisible_emoji} ᏁᏋﾒᎿ ▶️", data=f"page({0 if page == (max_pages - 1) else page + 1})"
             ),
         ]
     )
@@ -78,12 +78,12 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         builder = event.builder
         result = None
         query = event.text
-        if event.query.user_id == bot.uid and query == "@MafiaBot_Support":
+        if event.query.user_id == bot.uid and query == "@Nikhil_Bots":
             rev_text = query[::-1]
             veriler = button(0, sorted(CMD_HELP))
             result = await builder.article(
                 f"Hey! Only use .help please",
-                text=f"**Running MafiaBot**[⚡🔥]({mafia_help_pic})\n\n__Number of plugins installed__ :`{len(CMD_HELP)}`\n**page:** 1/{veriler[0]}",
+                text=f"**Running InvisibleBot**[⚡🔥]({invisible_help_pic})\n\n__Number of plugins installed__ :`{len(CMD_HELP)}`\n**page:** 1/{veriler[0]}",
                 buttons=veriler[1],
                 link_preview=True,
             )
@@ -97,21 +97,21 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             )
         elif event.text=='':
             result = builder.article(
-                "@MafiaBot_Support",
-                text=f"""**Hey![🤗]({mafia_help_pic}) This is [MafiaBot.](https://t.me/MafiaBot_Support)\nYou can know more about me from the links given below 👇**""",
+                "@Nikhil_Bots",
+                text=f"""**Hey![🤗]({invisible_help_pic}) This is [InvisibleBot.](https://t.me/Nikhil_Bots)\nYou can know more about me from the links given below 👇**""",
                 buttons=[
                     [
-                        custom.Button.url("🔥 CHANNEL 🔥", "https://t.me/MafiaBot_Support"),
+                        custom.Button.url("🔥 CHANNEL 🔥", "https://t.me/Nikhil_Bots1"),
                         custom.Button.url(
-                            "⚡ GROUP ⚡", "https://t.me/MafiaBot_Chit_Chat"
+                            "⚡ GROUP ⚡", "https://t.me/Nikhil_Bots1"
                         ),
                     ],
                     [
                         custom.Button.url(
-                            "✨ REPO ✨", "https://github.com/MafiaBotOP/MafiaBot"),
+                            "✨ REPO ✨", "https://github.com/Nameg1708/userbot"),
                         custom.Button.url
                     (
-                            "🔰 TUTORIAL 🔰", "https://youtu.be/aRFWP4_RCaE"
+                            "🔰 TUTORIAL 🔰", "We will add soon"
                     )
                     ],
                 ],
@@ -130,7 +130,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         page = int(event.data_match.group(1).decode("UTF-8"))
         veriler = button(page, CMD_HELP)
         await event.edit(
-            f"**Legenday AF MafiaBot[⚡🔥]({mafia_help_pic})[.](https://t.me/MafiaBot_Support) __Working...__\n\n**Number of modules installed :** `{len(CMD_HELP)}`\n**page:** {page + 1}/{veriler[0]}",
+            f"**Legenday AF InvisibleBot[⚡🔥]({invisible_help_pic})[.](https://t.me/Nikhil_Bots) __Working...__\n\n**Number of modules installed :** `{len(CMD_HELP)}`\n**page:** {page + 1}/{veriler[0]}",
             buttons=veriler[1],
             link_preview=True,
         )
@@ -138,9 +138,9 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
     @tgbot.on(events.callbackquery.CallbackQuery(data=re.compile(b"close")))
     async def on_plug_in_callback_query_handler(event):
         if event.query.user_id == bot.uid:
-            await event.edit(f"⚜️MafiaBot Menu Provider Is now Closed[⚜️]({mafia_help_pic})\n\n         **[© MafiaBot ™](t.me/MafiaBot_Support)**[⚡🔥]({mafia_help_pic})", 5, link_preview=True)
+            await event.edit(f"⚜️InvisibleBot Menu Provider Is now Closed[⚜️]({invisible_help_pic})\n\n         **[© InvisibleBot ™](t.me/Nikhil_Bots)**[⚡🔥]({invisible_help_pic})", 5, link_preview=True)
         else:
-            mafia_alert = "HELLO THERE. PLEASE MAKE YOUR OWN MAFIABOT AND USE. © MafiaBot ™"
+            mafia_alert = "HELLO THERE. PLEASE MAKE YOUR OWN INVISIBLEBOT AND USE. © InvisibleBot ™"
             await event.answer(mafia_alert, cache_time=0, alert=True)
           
     @tgbot.on(
@@ -149,7 +149,7 @@ if Var.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
     async def Information(event):
         if not event.query.user_id == bot.uid:
             return await event.answer(
-                "HELLO THERE. PLEASE MAKE YOUR OWN MAFIABOT AND USE. © MafiaBot ™",
+                "HELLO THERE. PLEASE MAKE YOUR OWN MAFIABOT AND USE. © InvisibleBot ™",
                 cache_time=0,
                 alert=True,
             )
