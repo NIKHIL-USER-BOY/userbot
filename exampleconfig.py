@@ -5,11 +5,11 @@ class Development(Config):
   # get this values from my.telegram.org. 
   # 6 is just a placeholder. Fill your own api id & hash.
   APP_ID = 6
-  API_HASH = "eb06d4abfb49dc3eeb1aeb98ae0f581e"
+  API_HASH = "f81f004a2c307474c76f3be051de7554"
 
   # the name to display in your alive message.
-  # If not filled anything then default value is Mafia User.
-  ALIVE_NAME = "Mafia User"
+  # If not filled anything then default value is Invisible  User.
+  ALIVE_NAME = "Invisible User"
   ABUSE = "OFF"
   BAN_PIC = "https://telegra.ph/"
   # create any PostgreSQL database.
@@ -30,7 +30,7 @@ class Development(Config):
   # and type /id and paste that id here.
   # replace that -100 with that group id.
   PRIVATE_GROUP_BOT_API_ID = -100
-          MAFIABOT_LOGGER = -1001174481876
+          NIKHILBOT_LOGGER = -1001566170132
   # Custom Command Handler. 
   COMMAND_HAND_LER = "."
 
