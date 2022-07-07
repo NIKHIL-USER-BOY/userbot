@@ -27,7 +27,7 @@ async def pasty(message, extension=None):
         )
         try:
             await bot.send_message(
-                Config.MAFIABOT_LOGGER,
+                Config.INVISIBLEBOT_LOGGER,
                 f"#PASTE \n\n**Open Paste From** [here]({purl}). \n**Delete that paste by using this token** `{response['deletionToken']}`",
             )
         except Exception as e:
@@ -42,7 +42,7 @@ async def pasty(message, extension=None):
 
 async def telegraph_paste(page_title, temxt):
     cl1ent = TelegraphPoster(use_api=True)
-    auth = "[ LEGENDARY AF MAFIABOT ]"
+    auth = "[ LEGENDARY AF INVISIBLEBOT ]"
     cl1ent.create_api_token(auth)
     post_page = cl1ent.post(
         title=page_title,
